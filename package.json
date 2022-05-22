@@ -1,10 +1,11 @@
 {
   "name": "api-rest-with-node-core",
   "version": "1.0.0",
-  "description": "- **entities** - Aqui teremos as entidades da aplicação. Elas definem a regra de negócio e têm como responsabilidade validar e definir qual a estrutura de dados de cada recurso.\r - **repositories** - Os repositories são responsáveis por executar ações no Banco de Dados, como a criação, edição, recuperação e exclusão de registros. (usa as `entities` como moldes de dados)\r - **services** - Aqui teremos os serviços da aplicação. Eles gerenciam a regra de negócios da aplicação. (usa os `repositories` e as `entities`)\r - **controllers** - Os controllers gerenciam as requisições HTTP adaptando-as para os `services` executarem algum caso de uso com os dados fornecidos e no fim retornam uma resposta HTTP para o cliente.\r - **factories** - Os factories irão gerar as instâncias que serão fornecidas como dependência do nosso controller e por fim retornar uma instância do próprio controller",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "npx nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/caiogmrocha/api-rest-with-node-core#readme",
   "devDependencies": {
-    "git-commit-msg-linter": "^4.1.3"
+    "git-commit-msg-linter": "^4.1.3",
+    "nodemon": "^2.0.16"
   }
 }
