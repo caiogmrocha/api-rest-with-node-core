@@ -3,6 +3,7 @@
     "id": 1,
     "name": "William",
     "email": "william@mail.com",
-    "country": "Brazil"
+    "country": "Brazil",
+    "course": "Psychology"
   }
 ]
