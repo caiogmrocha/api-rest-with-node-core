@@ -1,8 +1,7 @@
 const databaseConnection = require('../../database/connection');
-const path = require('path');
 
 class GetAllStudentsRepository {
-  constructor (databaseConnection) {
+  constructor () {
     this.databaseConnection = databaseConnection;
   }
 
