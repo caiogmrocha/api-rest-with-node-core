@@ -1,4 +1,3 @@
-const Student = require('../entities/student');
 const DEFAULT_HEADER = require('../router/index');
 
 class GetAllStudentsController {
@@ -7,7 +6,7 @@ class GetAllStudentsController {
   }
 
   async handle(request, response) {
-    const students = await this.getAllStudentsService();
+    const students = await this.getAllStudentsService.execute();
 
     response.writeHead(200, DEFAULT_HEADER);
     response.write(JSON.stringify(students));

@@ -1,12 +1,14 @@
 const GetAllStudentsFactory = require('../factories/get-all-students');
-const getAllStudentsController = GetAllStudentsFactory.getInstance();
+const getAllStudentsController = GetAllStudentsFactory.generateInstance();
 
 const DEFAULT_HEADER = {
   'Content-Type': 'application/json',
 };
 
 const routes = {
-  "/students:get": getAllStudentsController.handle,
+  "/students:get": function (request, response) {
+    return getAllStudentsController.handle(request, response);
+  },
   "notFound": () => {
     response.writeHead(404, DEFAULT_HEADER);
     response.write(JSON.stringify({ message: 'Página não encontrada.' }));
